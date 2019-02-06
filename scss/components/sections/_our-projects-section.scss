@@ -1,0 +1,82 @@
+.our-projects-section{
+	.projects-descriptions-wrapper{
+		width: calc(100% + 115px);
+		margin-right: -115px;
+	}
+
+	.projects-descriptions-slider{
+		width: 100%;
+		border: 2px solid $primary;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 17px;
+			height: 30px;
+			background: url(../img/backgrounds/arrow-right.png) no-repeat;
+			position: absolute;
+			top: -16px;
+			right: 134px;
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			width: 135px;
+			height: 12px;
+			background: $body-bg;
+			position: absolute;
+			right: 0;
+			top: -7px;
+		}
+
+		.slide{
+			padding: 35px 155px 45px 40px;
+
+			.short-description{
+				max-width: 280px;
+			}
+		}
+	}
+
+	.project-equipment-info{
+		margin-bottom: 40px;
+
+		.pei-caption{
+			font-size: 11px;
+			font-weight: 500;
+			color: $text-light;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+		}
+
+		a{
+			font-size: 14px;
+			line-height: 26px;
+			color: $text-color;
+			text-decoration: underline;
+			font-weight: bold;
+
+			&:hover{
+				color: $accent;
+			}
+		}
+	}
+
+	.photos-slider{
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 118px;
+			height: 119px;
+			background: url(../img/backgrounds/dashed-triangle.png) no-repeat;
+			position: absolute;
+			left: -100px;
+			bottom: 45px;
+			z-index: -1;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.logo{
+	display: flex;
+	transition: all $t;
+
+	&:hover{
+		opacity: .8;
+	}
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}

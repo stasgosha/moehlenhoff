@@ -1,0 +1,82 @@
+$colors: (
+	white: #fff,
+	text: $text-color,
+	accent: $accent,
+	primary: $primary,
+);
+
+// blue: $blue,
+// orange: $orange,
+// dark: $text-dark
+
+@each $i in $colors{
+	$color-key: nth($i, 1);
+	$color-value: nth($i, 2);
+
+	&.color-#{$color-key}{
+		color: $color-value !important;
+	}
+}
+
+.push{
+	position: relative;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-right{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.left-shift{
+	margin-left: -15px;
+}
+
+.right-shift{
+	margin-right: -15px;
+}
+
+.font-400{
+	font-weight: 400 !important;
+}
+
+.font-500{
+	font-weight: 500 !important;
+}
+
+.font-600{
+	font-weight: 600 !important;
+}
+
+.gray-plusses-bg{
+	$gray-plusses-size: 30px;
+	background: url(../img/backgrounds/gray-plus-bg.png);
+	width: 100%;
+	margin-top: -20px;
+	height: $gray-plusses-size;
+
+	&.rows-2{ height: calc(#{$gray-plusses-size} * 1 + 9px); }
+	&.rows-3{ height: calc(#{$gray-plusses-size} * 2 + 9px); }
+	&.rows-4{ height: calc(#{$gray-plusses-size} * 3 + 9px); }
+	&.rows-5{ height: calc(#{$gray-plusses-size} * 4 + 9px); }
+}
+
+.gray-dots-bg{
+	background: url(../img/backgrounds/gray-dots-bg.png);
+	width: calc(100% + 64px);
+	margin-left: -32px;
+	margin-right: -32px;
+	margin-top: -50px;
+	margin-bottom: 20px;
+	height: calc(16px * 5 + 2px); // 6 lines
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}

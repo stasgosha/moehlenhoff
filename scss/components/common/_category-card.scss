@@ -1,0 +1,31 @@
+.category-card{
+	background: #fff;
+	box-shadow: $shadow;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border-bottom: 5px solid $primary;
+	background: #fff;
+	transition: all $t;
+	justify-content: space-between;
+	color: $text-color;
+
+	&:hover{
+		background: $accent;
+		color: #fff;
+	}
+
+	.card-name{
+		padding: 40px 30px;
+		flex: auto;
+		margin-bottom: 60px;
+	}
+
+	.card-image{
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
