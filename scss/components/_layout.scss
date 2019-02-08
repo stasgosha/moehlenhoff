@@ -16,6 +16,18 @@ body{
 	color: $text-color;
 	font-family: $main-font;
 	background: $body-bg;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+.clearfix{
+	overflow: auto;
+
+	&:after{
+		content: "";
+		clear: both;
+		display: table;
+	}
 }
 
 a, button{
@@ -42,6 +54,7 @@ ol{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	padding-top: 183px;
 
 	.page{
 		flex: auto;
@@ -154,6 +167,26 @@ ol{
 		}
 	}
 
+	@media screen and (max-width: 1199px){
+		&.lg-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.lg-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.lg-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
 	@media screen and (max-width: 991px){
 		&.md-columns-3{
 			> .item{
@@ -242,6 +275,18 @@ ol{
 	padding-right: 58px;
 	padding-bottom: 30px;
 	display: inline-flex;
+	align-items: flex-start;
+	background: $body-bg;
+
+	&.alignleft{
+		float: left;
+		margin-right: 30px;
+	}
+
+	&.alignright{
+		float: right;
+		margin-left: 30px;
+	}
 
 	.lines{
 		position: relative;
@@ -283,9 +328,74 @@ ol{
 		height: auto;
 		border-bottom: 16px solid $primary;
 	}
+
+	@media screen and (max-width: 991px){
+		padding-right: 30px;
+		padding-bottom: 0;
+		width: 100%;
+		max-width: 240px;
+		margin-bottom: 30px;
+
+		.lines{
+			width: 15px;
+			height: calc(100% - 16px);
+
+			&:before{
+				border-width: 0 0 13px 13px;
+			}
+		}
+
+		&:after{
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		margin-bottom: 30px;
+	}
+
+	@media screen and (max-width: 575px){
+		max-width: none;
+		width: auto;
+
+		&.alignleft,
+		&.alignright{
+			float: none;
+			margin-right: 0;
+		}
+	}
 }
 
 .white-card{
 	background: #fff;
 	box-shadow: $shadow;
+}
+
+.image-card{
+	padding: 15px;
+	width: 100%;
+
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 6px;
+	}
+}
+
+.bordered-map{
+	padding: 15px;
+	width: 100%;
+	margin-bottom: 35px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 575px){
+		padding: 6px;
+	}
 }

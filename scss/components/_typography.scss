@@ -5,6 +5,10 @@ body{
 	line-height: 1.625;
 	color: $text-color;
 	font-family: $main-font;
+
+	@media screen and (max-width: 575px){
+		font-size: 15px;
+	}
 }
 
 .tpg-typography p,
@@ -17,6 +21,10 @@ body .tpg-body-1,
 
 	&:last-child{
 		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 15px;
 	}
 }
 
@@ -33,22 +41,21 @@ body .tpg-body-2{
 	text-transform: uppercase;
 }
 
-// .tpg-typography h1,
-// body .tpg-h1{
-// 	font-size: 36px;
-// 	line-height: 1.333;
-// 	margin: 0 0 1.333em;
-// 	font-weight: bold;
-// 	color: $primary;
+.tpg-typography h1,
+body .tpg-h1{
+	font-size: 36px;
+	line-height: 1.2;
+	margin: 0 0 25px;
+	font-weight: 500;
 
-// 	&:last-child{
-// 		margin-bottom: 0;
-// 	}
+	&:last-child{
+		margin-bottom: 0;
+	}
 
-// 	@media screen and (max-width: 767px){
-// 		font-size: 30px;
-// 	}
-// }
+	@media screen and (max-width: 767px){
+		font-size: 26px;
+	}
+}
 
 .tpg-typography h2,
 body .tpg-h2{
@@ -62,7 +69,7 @@ body .tpg-h2{
 	}
 
 	@media screen and (max-width: 767px){
-		font-size: 24px;
+		font-size: 26px;
 	}
 }
 
@@ -76,6 +83,15 @@ body .tpg-h3{
 	&:last-child{
 		margin-bottom: 0;
 	}
+
+	@media screen and (max-width: 767px){
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&.bigger-margin{
+		margin-bottom: 25px;
+	}
 }
 
 .tpg-typography h4,
@@ -88,6 +104,11 @@ body .tpg-h4{
 
 	&:last-child{
 		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 767px){
+		font-size: 12px;
+		line-height: 20px;
 	}
 }
 

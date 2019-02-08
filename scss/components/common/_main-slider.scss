@@ -1,7 +1,8 @@
 .main-slider{
 	position: relative;
 	background: #0d1535;
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
+	height: 714px;
 
 	&:after{
 		content: '';
@@ -20,9 +21,11 @@
 		padding-bottom: 95px;
 		height: 714px;
 		position: relative;
+		overflow: hidden;
 
 		.container{
 			position: relative;
+			height: calc(714px - 95px - 65px);
 
 			&:after{
 				content: '';
@@ -52,68 +55,94 @@
 			top: 0;
 			background-size: cover;
 			background-position: center center;
-		}
-	}
 
-	.slider-features{
-		display: flex;
-		flex-wrap: wrap;
-		width: calc(100% + 14px);
-		margin-left: -7px;
-		margin-right: -7px;
-		margin-bottom: -14px;
-		counter-reset: features;
-		position: relative;
-
-		&:before{
-			content: '';
-			display: block;
-			width: 189px;
-			height: 279px;
-			position: absolute;
-			left: -50px;
-			top: -50px;
-			background: url(../img/backgrounds/green-plus-bg.png);
-		}
-
-		> .item{
-			padding: 0 7px;
-			width: 50%;
-			margin-bottom: 14px;
-			counter-increment: features;
-
-			.feature-card{
-				&:before{
-					content: '0'counter(features);
-				}
+			@media screen and (max-width: 767px){
+				background-position: 70% center;
 			}
 		}
 	}
 
 	.slick-arrow{
 		&.slick-prev{
-			right: calc(100% - 64px - 15px);
+			right: calc(100% - 34px - 15px);
 		}
 
 		&.slick-next{
-			left: calc(100% - 64px - 15px);
+			left: calc(100% - 34px - 15px);
+		}
+
+		@media screen and (max-width: 991px){
+			&.slick-prev{
+				right: calc(100% - 34px);
+			}
+
+			&.slick-next{
+				left: calc(100% - 34px);
+			}
 		}
 
 		@media screen and (min-width: 1601px){
-				&.slick-prev{
-					right: auto;
-					left: calc(50% - 585px - 195px);
-				}
+			&.slick-prev{
+				right: auto;
+				left: calc(50% - 585px - 195px);
+			}
 
-				&.slick-next{
-					left: auto;
-					right: calc(50% - 585px - 195px);
-				}
+			&.slick-next{
+				left: auto;
+				right: calc(50% - 585px - 195px);
+			}
 		}
 	}
 
 	.slick-dots{
-		bottom: 20px;
+		bottom: 20px !important;
+	}
+}
+
+.slider-features{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 14px);
+	margin-left: -7px;
+	margin-right: -7px;
+	margin-bottom: -14px;
+	position: relative;
+	width: 100%;
+	max-width: 568px;
+
+	@media screen and (max-width: 991px){
+		width: calc(220px * 2 + 28px);
+	}
+
+	&:before{
+		content: '';
+		display: block;
+		width: 189px;
+		height: 279px;
+		position: absolute;
+		left: -50px;
+		top: -50px;
+		background: url(../img/backgrounds/green-plus-bg.png);
+	}
+
+	.item{
+		padding: 0 7px;
+		width: 50%;
+		margin-bottom: 14px;
+	}
+
+	@media screen and (max-width: 767px){
+		width: calc(100% + 14px);
+		max-width: calc(100% + 14px);
+
+		&:before{
+			display: none;
+		}
+
+		.item{
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 
@@ -129,7 +158,7 @@
 	position: relative;
 	text-align: center;
 
-	&:before{
+	.card-number{
 		font-family: $second-font;
 		font-size: 36px;
 		line-height: 1;
@@ -152,5 +181,46 @@
 
 	.card-text{
 		// flex: auto;
+	}
+
+	@media screen and (max-width: 991px){
+		width: 220px;
+		height: 220px;
+		padding: 25px 15px;
+
+		.card-icon{
+			width: 70px;
+			margin-bottom: 15px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		align-items: center;
+		padding: 35px 25px;
+		max-width: 300px;
+
+		.card-number{
+			font-size: 18px;
+			line-height: 24px;
+			top: 10px;
+			right: 30px;
+			left: auto;
+		}
+
+		.card-icon{
+			width: 64px;
+			height: 70px;
+			flex: none;
+			margin-bottom: 0;
+		}
+
+		.card-text{
+			flex: auto;
+			text-align: left;
+			margin-left: 20px;
+		}
 	}
 }

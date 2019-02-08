@@ -1,6 +1,7 @@
 .logo{
 	display: flex;
 	transition: all $t;
+	align-items: flex-start;
 
 	&:hover{
 		opacity: .8;
@@ -10,5 +11,6 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+		transition: all $t;
 	}
 }

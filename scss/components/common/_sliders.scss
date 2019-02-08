@@ -5,6 +5,12 @@
 	.slide{
 		padding: 10px 15px;
 	}
+
+	@media screen and (max-width: 575px){
+		&.fullwidth-fix{
+			width: calc(100vw - 15px);
+		}
+	}
 }
 
 .slide{
@@ -92,8 +98,8 @@
 	}
 }
 
-.slick-dotted{
-	margin-bottom: 45px;
+.slick-slider.slick-dotted{
+	margin-bottom: 50px;
 
 	.slick-dots{
 		bottom: -33px;
@@ -141,7 +147,7 @@
 .photos-slider{
 	border: 15px solid #fff;
 	box-shadow: $shadow;
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 
 	.slide{
 		img{
@@ -202,6 +208,6 @@
 		bottom: 0;
 		width: auto;
 		left: 30px;
-		bottom: 20px;
+		bottom: 20px !important;
 	}
 }

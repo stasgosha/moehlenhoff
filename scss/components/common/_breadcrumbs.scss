@@ -1,0 +1,38 @@
+.breadcrumbs-section{
+	padding: 20px 0 45px;
+}
+
+.breadcrumbs{
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	width: 100%;
+
+	li{
+		font-size: 11px;
+		line-height: 20px;
+		color: $text-color;
+		display: flex;
+		align-items: center;
+
+		&:after{
+			content: "\\";
+			display: block;
+			margin: 0 10px;
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+
+		a{
+			color: $text-color;
+
+			&:hover{
+				color: $accent;
+			}
+		}
+	}
+}

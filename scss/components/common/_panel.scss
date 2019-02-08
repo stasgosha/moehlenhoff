@@ -2,9 +2,10 @@
 .panel{
 	overflow: hidden;
 	height: 100vh;
-	background: #ccc;
+	background: #fff;
 	position: relative;
 	z-index: 1000;
+	transition: all $t;
 
 	.panel-inner{
 		padding: 20px 0;
@@ -16,10 +17,165 @@
 	.panel-nav{
 		list-style: none;
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 25px;
+		margin-bottom: 55px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		> li{
+			border-bottom: 1px solid #e8ebee;
+			position: relative;
+
+			> a{
+				display: block;
+				padding: 20px 0;
+				font-size: 16px;
+				line-height: 20px;
+				color: $text-color;
+				font-weight: 600;
+				text-decoration: none;
+
+				&:hover{
+					color: $primary;
+				}
+			}
+
+			&.menu-item-has-children{
+				position: relative;
+
+				> a{
+					flex: auto;
+				}
+
+				.opener{
+					position: absolute;
+					z-index: 5;
+					right: 0;
+					top: 18px;
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-parent{
+				> a{
+					color: $primary;
+				}
+			}
+			
+			&.current-menu-item{
+				> a{
+					cursor: default;
+				}
+			}
+		}
+
+		.sub-menu{
+			margin-bottom: 20px;
+			display: none;
+
+			> li{
+				> a{
+					font-size: 15px;
+					line-height: 30px;
+					text-decoration: underline;
+					color: $text-color;
+
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+
+	.opener{
+		width: 23px;
+		height: 23px;
+		border-radius: 50%;
+		border: 1px solid #ddd;
+		position: relative;
+		transition: all $t;
+
+		&:after,
+		&:before{
+			content: '';
+			display: block;
+			width: 6px;
+			height: 2px;
+			border-radius: 1px;
+			background: #000;
+			position: absolute;
+			left: calc(50% - 1.5px);
+			top: calc(50% - 1px);
+			transform-origin: 50% 50%;
+			transition: all $t;
+		}
+
+		&:before{
+			transform: rotate(45deg);
+			margin-left: -3px;
+		}
+
+		&:after{
+			transform: rotate(-45deg);
+			margin-right: -3px;
+		}
+	}
+
+	.opened{
+		.opener{
+			&:after,
+			&:before{
+				top: calc(50% - 2px);
+			}
+
+			&:before{
+				transform: rotate(-45deg);
+			}
+
+			&:after{
+				transform: rotate(45deg);
+			}
+		}
 	}
 
 	.panel-content{
-		padding: 0 15px;
+		padding: 0 25px;
+
+		p{
+			font-size: 13px;
+			line-height: 24px;
+			color: $text-color;
+
+			a{
+				text-decoration: none;
+				color: $text-color;
+
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
 	}
+
+	&[style*='left: 0px']{
+		box-shadow: $shadow;
+
+		+ .panel-overlay{
+			z-index: 900;
+			background: rgba(#000, .75);
+		}
+	}
+}
+
+.panel-overlay{
+	z-index: -100;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transition: background $t;
 }

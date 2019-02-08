@@ -79,4 +79,40 @@
 			z-index: -1;
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		.projects-descriptions-wrapper{
+			width: 100%;
+			margin-right: 0;
+		}
+
+		.projects-descriptions-slider{
+			border-top: 0;
+
+			.slide{
+				padding: 25px 20px 30px;
+			}
+
+			&:before{
+				top: 36px;
+				right: -13px;
+				width: 24px;
+				height: 14px;
+				background: url(../img/backgrounds/arrow-top.png) no-repeat;
+			}
+
+			&:after{
+				width: 12px;
+				height: 37px;
+				top: 0;
+				right: -7px;
+			}
+		}
+
+		.photos-slider{
+			&:before{
+				display: none;
+			}
+		}
+	}
 }

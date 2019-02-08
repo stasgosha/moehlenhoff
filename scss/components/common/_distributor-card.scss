@@ -1,0 +1,87 @@
+.distributor-card{
+	padding: 23px 25px;
+	border-left: 3px solid $primary;
+	position: relative;
+	cursor: pointer;
+
+	.card-number{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: transparent;
+		border-radius: 3px 3px 0 0;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		transition: all $t;
+		color: $text-color;
+
+		span{
+			font-size: 14px;
+			line-height: 20px;
+			display: block;
+			margin-top: 3px;
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px 10px 0 10px;
+			border-color: $primary transparent transparent transparent;
+			position: absolute;
+			left: 0;
+			bottom: -8px;
+			opacity: 0;
+			transition: all $t;
+		}
+	}
+
+	.card-caption{
+		font-size: 16px;
+		line-height: 24px;
+		text-decoration: underline;
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	p{
+		font-size: 13px;
+		line-height: 24px;
+
+		a{
+			text-decoration: none;
+			color: $text-color;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+
+	&.current{
+		.card-number{
+			background: $primary;
+			color: #fff;
+
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.distributors-list{
+	// width: 100%;
+	height: 548px;
+
+	.distributor-card{
+		margin-bottom: 10px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

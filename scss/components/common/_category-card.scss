@@ -28,4 +28,10 @@
 			height: auto;
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		.card-name{
+			padding: 20px;
+		}
+	}
 }

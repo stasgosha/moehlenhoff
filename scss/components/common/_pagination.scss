@@ -1,0 +1,152 @@
+.pagination-wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding-top: 50px;
+
+	&:before,
+	&:after{
+		content: '';
+		display: block;
+		width: 128px;
+		height: 1px;
+		background: #bdc8d2;
+	}
+
+	&:before{
+		margin-right: 20px;
+	}
+
+	&:after{
+		margin-left: 20px;
+	}
+}
+
+.pagination{
+	list-style: none;
+	display: flex;
+	align-items: center;
+
+	li{
+		margin-right: -1px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a{
+			min-width: 36px;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 10px 8px;
+			color: $text-color;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+			border: 1px solid #bdc8d2;
+
+			&:hover{
+				background: $accent;
+				border-color: $accent;
+				color: #fff;
+			}
+		}
+
+		&.current{
+			position: relative;
+			z-index: 5;
+
+			a{
+				background: $accent;
+				cursor: default;
+				border-color: $accent;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.wp-pagenavi{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.inner-wrapper{
+		.inner{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	span,
+	a{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 36px;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 10px 8px;
+		margin-right: 1px;
+		text-decoration: none;
+		color: $text-color;
+		font-weight: bold;
+		border: 1px solid #bdc8d2;
+		margin-right: -1px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:hover{
+			background: $accent;
+			color: #fff;
+		}
+
+		&.current{
+			background: $accent;
+			cursor: default;
+			color: #fff;
+			position: relative;
+			z-index: 5;
+			border-color: $accent;
+		}
+	}
+
+	span{
+		cursor: default;
+		margin-right: -1px;
+
+		&:hover{
+			color: #fff;
+		}
+
+		&.extend{
+			background: transparent;
+
+			&:hover{
+				color: $text-color;
+			}
+		}
+	}
+
+	.nextpostslink,
+	.previouspostslink{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 40px;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 10px 8px;
+		text-decoration: none;
+		position: relative;
+		color: $text-color;
+		background: #e6e6e6;
+
+		&:hover{
+			background: $accent;
+		}
+	}
+}
