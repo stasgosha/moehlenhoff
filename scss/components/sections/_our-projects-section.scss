@@ -67,6 +67,17 @@
 	.photos-slider{
 		position: relative;
 
+		.slide-photo{
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			padding-top: 65.625%;
+
+			@media screen and (max-width: 575px){
+				padding-top: 71.4285%;
+			}
+		}
+
 		&:before{
 			content: '';
 			display: block;

@@ -17,6 +17,11 @@
 		left: 50%;
 		transform: translate(-50%, 80%);
 		transition: all $t;
+
+		@media screen and (max-width: 440px){
+			background-image: url(../img/shadow-mobile.png);
+			padding-top: 8.4745%;
+		}
 	}
 
 	> li{

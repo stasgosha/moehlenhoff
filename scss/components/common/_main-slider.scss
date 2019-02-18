@@ -97,6 +97,18 @@
 	.slick-dots{
 		bottom: 20px !important;
 	}
+
+	@media screen and (max-width: 767px){
+		height: 560px;
+
+		.slide{
+			height: 560px;
+
+			.container{
+				height: calc(560px - 95px - 65px);
+			}
+		}
+	}
 }
 
 .slider-features{

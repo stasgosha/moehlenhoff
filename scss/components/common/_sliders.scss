@@ -210,4 +210,13 @@
 		left: 30px;
 		bottom: 20px !important;
 	}
+
+	@media screen and (max-width: 767px){
+		border-width: 6px;
+
+		.slick-dots{
+			left: 15px;
+			bottom: 11px !important;
+		}
+	}
 }

@@ -17,7 +17,16 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					arrows: false,
+					dots: true
+				}
+			}
+		]
 	});
 
 	$('.big-photos-slider').slick({

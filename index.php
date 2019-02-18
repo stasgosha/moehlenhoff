@@ -152,8 +152,8 @@
 						<div class="photos-slider our-projects-photos-slider">
 							<?php for ($i=0; $i < 7; $i++): ?>
 								<div class="slide">
+									<div class="slide-photo" style="background-image: url(img/tmp/projects-slider-image.jpg);"></div>
 									<!-- Image Size: 639x419 -->
-									<img src="img/tmp/projects-slider-image.jpg" alt="">
 								</div>
 							<?php endfor; ?>
 						</div>
