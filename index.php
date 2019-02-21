@@ -187,8 +187,8 @@
 							</a>
 							<div class="card-content">
 								<p class="tpg-note card-date">23 апреля 2019</p>
-								<a href="#" class="card-caption">Краткий заголовок новости</a>
-								<p class="excerpt">Для этого, с 2014 года с немецкими коллегами велись переговоры</p>
+								<a href="#" class="card-caption">Длинный заголовок новости в несколько строк или даже больше</a>
+								<p class="excerpt">Для этого, с 2014 года с немецкими коллегами велись переговоры. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 								<a href="#" class="btn btn-light btn-small">Подробнее</a>
 							</div>
 						</div>
