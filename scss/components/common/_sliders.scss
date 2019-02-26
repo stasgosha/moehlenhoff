@@ -96,6 +96,21 @@
 			background-image: url(../img/icons/slider-arrows-dark.png);
 		}
 	}
+
+	@media screen and (max-width: 1299px) and (min-width: 1200px){
+		width: calc(100% - 30px);
+		margin-left: 15px;
+
+		.slick-arrow{
+			&.slick-prev{
+				right: calc(100% - 25px);
+			}
+
+			&.slick-next{
+				left: calc(100% - 25px);
+			}
+		}
+	}
 }
 
 .slick-slider.slick-dotted{

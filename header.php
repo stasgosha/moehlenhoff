@@ -51,7 +51,7 @@
 							<ul class="top-nav d-none d-lg-flex">
 								<li><a href="production.php">Продукция</a></li>
 								<li><a href="about.php">О компании</a></li>
-								<li><a href="objects.php">Наши объекты</a></li>
+								<li><a href="projects.php">Наши объекты</a></li>
 								<li><a href="documents.php">Документы</a></li>
 								<li><a href="news.php">Новости</a></li>
 								<li><a href="events.php">Мероприятия</a></li>

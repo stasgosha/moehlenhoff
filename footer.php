@@ -38,7 +38,7 @@
 					</ul>
 				</li>
 				<li><a href="about.php">Предприятие</a></li>
-				<li><a href="objects.php">Наши объекты</a></li>
+				<li><a href="projects.php">Наши объекты</a></li>
 				<li><a href="documents.php">Документация</a></li>
 				<li><a href="news.php">Новости и статьи</a></li>
 				<li><a href="events.php">Мероприятия</a></li>
