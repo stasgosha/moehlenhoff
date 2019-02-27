@@ -33,11 +33,13 @@
 
 		.card-caption{
 			font-size: 16px;
-			line-height: 24px;
+			line-height: 1.5;
 			font-weight: 600;
 			margin-bottom: 15px;
 			text-decoration: underline;
 			color: $text-color;
+			max-height: calc(1.5em * 3); // 3 lines
+			overflow: hidden;
 
 			&:hover{
 				color: $accent;
@@ -47,6 +49,10 @@
 		.excerpt{
 			flex: auto;
 			margin-bottom: 15px;
+			font-size: 16px;
+			line-height: 1.625;
+			max-height: calc(1.625em * 6); // 6 lines
+			overflow: hidden;
 		}
 	}
 
