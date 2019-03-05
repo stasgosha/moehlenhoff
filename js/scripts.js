@@ -11,6 +11,10 @@ $(document).ready(function(){
 	// 	e.preventDefault();
 	// });
 
+	$('.panel-overlay').click(function(){
+		$('.menu-opener').click();
+	});
+
 	// Sliders
 	$('.main-slider').slick({
 		infinite: true,
